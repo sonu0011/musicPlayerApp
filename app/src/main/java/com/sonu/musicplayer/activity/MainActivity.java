@@ -28,7 +28,7 @@ import com.sonu.musicplayer.model.Playlist;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    static ArrayList<MusicFiles> musicFiles = new ArrayList<>();
+   public static ArrayList<MusicFiles> musicFiles = new ArrayList<>();
     static ArrayList<MusicFiles> albums = new ArrayList<>();
     public static ArrayList<Playlist> playlists = new ArrayList<>();
 

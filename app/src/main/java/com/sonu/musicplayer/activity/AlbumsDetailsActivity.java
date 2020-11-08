@@ -8,6 +8,7 @@ import android.media.MediaMetadataRetriever;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -38,18 +39,24 @@ public class AlbumsDetailsActivity extends AppCompatActivity {
                     j++;
                 }
             }
-            byte[] art = getAlbumArt(albumSongs.get(0).getPath());
+            if (albumSongs.size() >0){
+                byte[] art = getAlbumArt(albumSongs.get(0).getPath());
 
-            if (art != null) {
-                Glide.with(this)
-                        .load(art)
-                        .into(this.art);
-                gradient.setVisibility(View.GONE);
+                if (art != null) {
+                    Glide.with(this)
+                            .load(art)
+                            .into(this.art);
+                    gradient.setVisibility(View.GONE);
+                }
+                MusicAdapter musicAdapter = new MusicAdapter(albumSongs , 1);
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false));
+                recyclerView.setAdapter(musicAdapter);
             }
-            MusicAdapter musicAdapter = new MusicAdapter(albumSongs , 1);
-            recyclerView.setHasFixedSize(true);
-            recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.VERTICAL, false));
-            recyclerView.setAdapter(musicAdapter);
+            else {
+                Toast.makeText(this, "No songs Found", Toast.LENGTH_SHORT).show();
+            }
+
         }
 
         private byte[] getAlbumArt(String uri) {
