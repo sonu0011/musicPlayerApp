@@ -1,4 +1,4 @@
-package com.sonu.musicplayer;
+package com.sonu.musicplayer.model;
 
 public class MusicFiles {
     private String path, title, artist, album, duration;

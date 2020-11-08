@@ -1,4 +1,4 @@
-package com.sonu.musicplayer;
+package com.sonu.musicplayer.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
@@ -22,18 +22,18 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.sonu.musicplayer.activity.PlaylistSongsActivity;
+import com.sonu.musicplayer.model.MusicFiles;
+import com.sonu.musicplayer.R;
 import com.sonu.musicplayer.interfaces.ActionPlaying;
 import com.sonu.musicplayer.receivers.NotificationReceiver;
 import com.sonu.musicplayer.service.MusicService;
 
 import java.util.ArrayList;
 
-import static com.sonu.musicplayer.AlbumsDetailsActivity.albumSongs;
+import static com.sonu.musicplayer.activity.AlbumsDetailsActivity.albumSongs;
 import static com.sonu.musicplayer.ApplicationClass.ACTION_NEXT;
 import static com.sonu.musicplayer.ApplicationClass.ACTION_PLAY;
 import static com.sonu.musicplayer.ApplicationClass.ACTION_PREVIOUS;

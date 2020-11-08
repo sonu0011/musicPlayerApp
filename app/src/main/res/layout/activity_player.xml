@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".PlayerActivity">
+    tools:context=".activity.PlayerActivity">
 
     <RelativeLayout
         android:id="@+id/layout_top_btn"
@@ -21,6 +21,8 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
             android:src="@drawable/ic_baseline_chevron_left_24" />
 
         <TextView
@@ -42,7 +44,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_baseline_menu_24" />
+            android:src="@drawable/ic_baseline_menu_24"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -55,15 +58,14 @@
             android:id="@+id/cover_art"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
             android:src="@drawable/ic_baseline_music_note_24" />
 
         <ImageView
-            android:visibility="visible"
             android:id="@+id/imageViewGradient"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:src="@drawable/gradient_bg" />
+            android:src="@drawable/gradient_bg"
+            android:visibility="visible" />
 
     </RelativeLayout>
 
@@ -107,7 +109,6 @@
         android:background="@drawable/gradient_bg">
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/shuffle"
             android:layout_width="35dp"
             android:layout_height="35dp"
@@ -116,7 +117,8 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:src="@drawable/ic_baseline_shuffle_off" />
+            android:src="@drawable/ic_baseline_shuffle_off"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/previous"
@@ -143,7 +145,6 @@
 
 
         <ImageView
-            android:visibility="gone"
             android:id="@+id/repeat"
             android:layout_width="35dp"
             android:layout_height="35dp"
@@ -152,7 +153,8 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
-            android:src="@drawable/ic_baseline_repeat_off" />
+            android:src="@drawable/ic_baseline_repeat_off"
+            android:visibility="gone" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -171,8 +173,8 @@
         android:id="@+id/seek_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="50dp"
-        android:layout_above="@+id/relativeLayout_bottom">
+        android:layout_above="@+id/relativeLayout_bottom"
+        android:layout_marginTop="50dp">
 
         <TextView
             android:id="@+id/duration_played"

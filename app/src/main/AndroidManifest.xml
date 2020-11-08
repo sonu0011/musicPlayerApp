@@ -3,24 +3,47 @@
     package="com.sonu.musicplayer">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
+        android:name=".ApplicationClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.PlaylistSongsActivity"></activity>
-        <activity android:name=".AlbumsDetailsActivity" />
-        <activity android:name=".PlayerActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".activity.PlaylistSongsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AlbumsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".service.MusicService"
+            android:enabled="true" />
+        <receiver
+            android:name=".receivers.NotificationReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="actionprevious" />
+                <action android:name="actionnext" />
+                <action android:name="actionplay" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

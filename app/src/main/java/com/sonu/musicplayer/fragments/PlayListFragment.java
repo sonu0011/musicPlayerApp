@@ -6,14 +6,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.sonu.musicplayer.AlbumAdapter;
-import com.sonu.musicplayer.MainActivity;
+import com.sonu.musicplayer.activity.MainActivity;
 import com.sonu.musicplayer.R;
 import com.sonu.musicplayer.adapter.PlaylistAdapter;
 

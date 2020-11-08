@@ -1,4 +1,4 @@
-package com.sonu.musicplayer;
+package com.sonu.musicplayer.activity;
 
 import android.Manifest;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,6 +21,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.sonu.musicplayer.fragments.AlbumsFragment;
+import com.sonu.musicplayer.model.MusicFiles;
+import com.sonu.musicplayer.R;
+import com.sonu.musicplayer.fragments.SongsFragment;
 import com.sonu.musicplayer.fragments.PlayListFragment;
 import com.sonu.musicplayer.model.Playlist;
 
@@ -29,7 +32,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
    public static ArrayList<MusicFiles> musicFiles = new ArrayList<>();
-    static ArrayList<MusicFiles> albums = new ArrayList<>();
+   public static ArrayList<MusicFiles> albums = new ArrayList<>();
     public static ArrayList<Playlist> playlists = new ArrayList<>();
 
     @Override

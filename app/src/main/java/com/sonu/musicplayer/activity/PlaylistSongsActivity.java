@@ -10,13 +10,11 @@ import android.media.MediaMetadataRetriever;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.sonu.musicplayer.MusicAdapter;
-import com.sonu.musicplayer.MusicFiles;
+import com.sonu.musicplayer.adapter.MusicAdapter;
+import com.sonu.musicplayer.model.MusicFiles;
 import com.sonu.musicplayer.R;
 
 import java.util.ArrayList;

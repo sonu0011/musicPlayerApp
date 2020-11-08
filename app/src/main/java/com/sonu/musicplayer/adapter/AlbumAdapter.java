@@ -1,4 +1,4 @@
-package com.sonu.musicplayer;
+package com.sonu.musicplayer.adapter;
 
 import android.content.Intent;
 import android.media.MediaMetadataRetriever;
@@ -12,6 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.sonu.musicplayer.activity.AlbumsDetailsActivity;
+import com.sonu.musicplayer.model.MusicFiles;
+import com.sonu.musicplayer.R;
 
 import java.util.ArrayList;
 

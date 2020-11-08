@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sonu.musicplayer.AlbumsDetailsActivity;
 import com.sonu.musicplayer.R;
 import com.sonu.musicplayer.activity.PlaylistSongsActivity;
 import com.sonu.musicplayer.model.Playlist;

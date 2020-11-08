@@ -1,4 +1,4 @@
-package com.sonu.musicplayer;
+package com.sonu.musicplayer.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -11,10 +11,13 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.sonu.musicplayer.model.MusicFiles;
+import com.sonu.musicplayer.R;
+import com.sonu.musicplayer.adapter.MusicAdapter;
 
 import java.util.ArrayList;
 
-import static com.sonu.musicplayer.MainActivity.musicFiles;
+import static com.sonu.musicplayer.activity.MainActivity.musicFiles;
 
 public class AlbumsDetailsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
